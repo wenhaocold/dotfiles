@@ -1,0 +1,11 @@
+[user]
+	name = wenhaocold
+	email = wenhaocold@163.com
+[https]
+	sslVerify = false
+[http]
+	sslVerify = false
+[init]
+	defaultBranch = main
+[alias]
+	st = status 
