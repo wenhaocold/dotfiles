@@ -72,6 +72,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Screenshot
     ([mod, "control"], "0", lazy.spawn("flameshot gui")),
 
+    # Goldendict
+    ([mod, "control"], "g", lazy.spawn("goldendict g")),
+
     # ------------ Hardware Configs ------------
 
     # Volume
