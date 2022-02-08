@@ -5,4 +5,3 @@
 # # systray volume
 # volumeicon &
 
-goldendict &
