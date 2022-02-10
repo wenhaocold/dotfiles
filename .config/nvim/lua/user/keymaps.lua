@@ -19,9 +19,13 @@ vim.g.maplocalleader = ","
 --   command_mode = "c",
 
 -- Normal --
+-- Save file
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("i", "<leader>w", "<esc>:w<cr>", opts)
+
+-- Close buffer
 keymap("n", "<leader>q", ":Bdelete<cr>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -45,6 +49,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+keymap("n", "<Esc>", "<Nop>", opts)
 
 -- Visual --
 -- Stay in indent mode
