@@ -63,7 +63,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "e", lazy.spawn("pcmanfm")),
 
     # Terminal
-    ([mod, "shift"], "Return", lazy.spawn(my_terminal)),
+    ([mod, "shift"], "Return", lazy.spawn("tabbed -c -p -1 alacritty --embed")),
 
     # Redshift
     ([mod], "r", lazy.spawn("redshift -O 2400")),
