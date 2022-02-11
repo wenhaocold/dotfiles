@@ -38,6 +38,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Kill window
     ([mod, "shift"], "c", lazy.window.kill()),
 
+    # Hide bar
+    ([mod], "b", lazy.hide_show_bar("top")),
+
     # Switch focus of monitors
     ([mod], "period", lazy.next_screen()),
     ([mod], "comma", lazy.prev_screen()),
@@ -56,14 +59,15 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Window Nav
     ([mod, "shift"], "p", lazy.spawn("rofi -show")),
 
-    # Browser
-    ([mod], "b", lazy.spawn("google-chrome-stable")),
+    # # Browser
+    # ([mod], "b", lazy.spawn("google-chrome-stable")),
 
     # File Explorer
     ([mod], "e", lazy.spawn("pcmanfm")),
 
     # Terminal
-    ([mod, "shift"], "Return", lazy.spawn("tabbed -c -p -1 alacritty --embed")),
+    # ([mod, "shift"], "Return", lazy.spawn("tabbed -c -p -1 alacritty --embed")),
+    ([mod, "shift"], "Return", lazy.spawn(my_terminal)),
 
     # Redshift
     ([mod], "r", lazy.spawn("redshift -O 2400")),
