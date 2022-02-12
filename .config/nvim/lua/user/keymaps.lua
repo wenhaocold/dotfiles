@@ -81,6 +81,20 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Telescope
 keymap("n", "<leader>f", ":Telescope find_files<cr>", opts)
 
+-- Search
+keymap("n", "<leader>l", ":noh<cr>", opts)
+vim.cmd [[
+noremap <silent> n <Cmd>execute('normal! ' . v:count1 . 'n')<CR>
+            \<Cmd>lua require('hlslens').start()<CR>
+noremap <silent> N <Cmd>execute('normal! ' . v:count1 . 'N')<CR>
+            \<Cmd>lua require('hlslens').start()<CR>
+noremap * *<Cmd>lua require('hlslens').start()<CR>
+noremap # #<Cmd>lua require('hlslens').start()<CR>
+noremap g* g*<Cmd>lua require('hlslens').start()<CR>
+noremap g# g#<Cmd>lua require('hlslens').start()<CR>
+]]
+
+
 if (vim.o.wrap) then
   keymap("n", "j", "gj", opts)
   keymap("n", "k", "gk", opts)

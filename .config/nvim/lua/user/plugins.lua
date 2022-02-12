@@ -57,6 +57,7 @@ return packer.startup(function(use)
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "ellisonleao/gruvbox.nvim" 
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -65,6 +66,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "f3fora/cmp-spell"
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -84,6 +86,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  use 'p00f/nvim-ts-rainbow'
 
   -- Git
   use "lewis6991/gitsigns.nvim"
@@ -99,9 +102,9 @@ return packer.startup(function(use)
   -- easy motion
   use 'easymotion/vim-easymotion'
 
-  -- rainbow
-  use 'p00f/nvim-ts-rainbow'
-  
+  -- search
+  use 'kevinhwang91/nvim-hlslens'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
