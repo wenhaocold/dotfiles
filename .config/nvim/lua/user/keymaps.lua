@@ -83,6 +83,7 @@ keymap("n", "<leader>f", ":Telescope find_files<cr>", opts)
 
 -- Search
 keymap("n", "<leader>l", ":noh<cr>", opts)
+keymap("n", "<Esc><Esc>", ":noh<cr>", opts)
 vim.cmd [[
 noremap <silent> n <Cmd>execute('normal! ' . v:count1 . 'n')<CR>
             \<Cmd>lua require('hlslens').start()<CR>
@@ -94,6 +95,13 @@ noremap g* g*<Cmd>lua require('hlslens').start()<CR>
 noremap g# g#<Cmd>lua require('hlslens').start()<CR>
 ]]
 
+-- quickhl
+vim.cmd [[
+nmap <leader>k <Plug>(quickhl-manual-this)
+xmap <leader>k <Plug>(quickhl-manual-this)
+nmap <leader>K <Plug>(quickhl-manual-reset)
+xmap <leader>K <Plug>(quickhl-manual-reset)
+]]
 
 if (vim.o.wrap) then
   keymap("n", "j", "gj", opts)

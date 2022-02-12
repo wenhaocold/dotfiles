@@ -105,6 +105,7 @@ return packer.startup(function(use)
   -- search
   use 'kevinhwang91/nvim-hlslens'
 
+  use 't9md/vim-quickhl' 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
