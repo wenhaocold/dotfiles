@@ -98,6 +98,9 @@ return packer.startup(function(use)
 
   -- easy motion
   use 'easymotion/vim-easymotion'
+
+  -- rainbow
+  use 'p00f/nvim-ts-rainbow'
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
