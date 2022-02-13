@@ -62,8 +62,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # # Browser
     # ([mod], "b", lazy.spawn("google-chrome-stable")),
 
-    # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    # # File Explorer
+    # ([mod], "e", lazy.spawn("pcmanfm")),
 
     # Terminal
     # ([mod, "shift"], "Return", lazy.spawn("tabbed -c -p -1 alacritty --embed")),
