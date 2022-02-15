@@ -12,6 +12,7 @@ chrony
 cmake
 deepin-screenshot
 dhcpcd
+dhcping
 dosfstools
 efibootmgr
 exa
@@ -22,14 +23,18 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-material-color
 fcitx5-nord
+fcitx5-pinyin-zhwiki
 fcitx5-qt
+filezilla
 firefox
 flameshot
 flex
 foliate
 fuse2
 gcc
+gcc-go
 git
+gnumeric
 groff
 grub
 htop
@@ -77,6 +82,7 @@ tmux
 ttf-nerd-fonts-symbols-mono
 ueberzug
 unzip
+vlc
 volumeicon
 w3m
 wget
