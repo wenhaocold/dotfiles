@@ -117,6 +117,8 @@ return packer.startup(function(use)
   -- indent
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- vim-illuminate
+  use "RRethy/vim-illuminate"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
