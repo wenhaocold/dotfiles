@@ -103,6 +103,10 @@ nmap <leader>K <Plug>(quickhl-manual-reset)
 xmap <leader>K <Plug>(quickhl-manual-reset)
 ]]
 
+-- hop.nvim
+keymap("n", "ss", ":HopChar2<cr>", opts)
+keymap("n", "sl", ":HopLine<cr>", opts)
+
 if (vim.o.wrap) then
   keymap("n", "j", "gj", opts)
   keymap("n", "k", "gk", opts)

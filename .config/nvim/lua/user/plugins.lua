@@ -100,8 +100,16 @@ return packer.startup(function(use)
   use 'davidgranstrom/nvim-markdown-preview'
 
   -- easy motion
-  use 'easymotion/vim-easymotion'
-
+  -- use 'easymotion/vim-easymotion'
+  -- better easy motion
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
   -- search
   use 'kevinhwang91/nvim-hlslens'
 
