@@ -123,6 +123,10 @@ return packer.startup(function(use)
   use "mfussenegger/nvim-dap"
   use "rcarriga/nvim-dap-ui"
   use "nvim-telescope/telescope-dap.nvim"
+
+  -- dashboard-nvim
+  use "glepnir/dashboard-nvim"
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
