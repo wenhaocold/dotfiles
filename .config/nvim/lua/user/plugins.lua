@@ -112,8 +112,7 @@ return packer.startup(function(use)
   }
   -- search
   use 'kevinhwang91/nvim-hlslens'
-  use 't9md/vim-quickhl' 
-  
+  use 't9md/vim-quickhl'
   -- indent
   use "lukas-reineke/indent-blankline.nvim"
 
@@ -121,10 +120,9 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
 
   -- debug
-  use { 
-    "rcarriga/nvim-dap-ui", 
-    requires = {"mfussenegger/nvim-dap"} 
-  }
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
+  use "nvim-telescope/telescope-dap.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
