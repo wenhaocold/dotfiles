@@ -25,5 +25,6 @@ keymap("n", "<leader>fc", ":DashboardChangeColorscheme<CR>", opts)
 keymap("n", "<leader>fw", ":DashboardFindWord<CR>", opts)
 keymap("n", "<leader>fm", ":DashboardJumpMark<CR>", opts)
 keymap("n", "<leader>fn", ":DashboardNewFile<CR>nmap <leader>fss :<C-u>SessionSave<CR>", opts)
+keymap("n", "<leader>fe", ":normal ,q,e<cr>", opts)
 
 
