@@ -1,16 +1,37 @@
 vim.g.dashboard_default_executive = 'telescope'
--- 这里的vim脚本不知道该怎么用lua来写。。。。
-vim.cmd [[
-let g:dashboard_custom_shortcut={
-      \ 'last_session'       : '<Leader> fs l',
-      \ 'find_history'       : '<Leader> f h',
-      \ 'find_file'          : '<Leader> f f',
-      \ 'new_file'           : '<Leader> f n',
-      \ 'change_colorscheme' : '<Leader> f c',
-      \ 'find_word'          : '<Leader> f w',
-      \ 'book_marks'         : '<Leader> f m',
-      \ }
-]]
+-- 变量赋值的三种写法
+-- 1. vimscript
+-- vim.cmd [[
+-- let g:dashboard_custom_shortcut={
+--       \ 'last_session'       : '<Leader> fs l',
+--       \ 'find_history'       : '<Leader> f h',
+--       \ 'find_file'          : '<Leader> f f',
+--       \ 'new_file'           : '<Leader> f n',
+--       \ 'change_colorscheme' : '<Leader> f c',
+--       \ 'find_word'          : '<Leader> f w',
+--       \ 'book_marks'         : '<Leader> f m',
+--       \ }
+-- ]]
+-- 2. vim.api.nvim_set_var
+-- vim.api.nvim_set_var('dashboard_custom_shortcut', {
+--   last_session       = '<Leader> fs l',
+--   find_history       = '<Leader> f h',
+--   find_file          = '<Leader> f f',
+--   new_file           = '<Leader> f n',
+--   change_colorscheme = '<Leader> f c',
+--   find_word          = '<Leader> f w',
+--   book_marks         = '<Leader> f m',
+-- })
+-- 3. vim.g
+vim.g.dashboard_custom_shortcut = {
+  last_session       = '<Leader> fs l',
+  find_history       = '<Leader> f h',
+  find_file          = '<Leader> f f',
+  new_file           = '<Leader> f n',
+  change_colorscheme = '<Leader> f c',
+  find_word          = '<Leader> f w',
+  book_marks         = '<Leader> f m',
+}
 -- keymap
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
