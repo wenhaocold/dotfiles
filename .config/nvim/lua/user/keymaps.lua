@@ -27,10 +27,10 @@ keymap("i", "<leader>w", "<esc>:w<cr>", opts)
 keymap("n", "<leader>q", ":Bdelete<cr>", opts)
 
 -- Better window navigation
-keymap("n", "<M-h>", "<C-w>h", opts)
-keymap("n", "<M-j>", "<C-w>j", opts)
-keymap("n", "<M-k>", "<C-w>k", opts)
-keymap("n", "<M-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
