@@ -18,5 +18,6 @@ dap.configurations.python = {
     pythonPath = function()
       return os.getenv('HOME') .. '/miniconda3/envs/pytorch/bin/python'
     end;
+    justMyCode = false;
   },
 }

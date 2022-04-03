@@ -144,6 +144,7 @@ return packer.startup(function(use)
 
   use "folke/todo-comments.nvim"
     use 'mechatroner/rainbow_csv'
+ use 'theHamsta/nvim-dap-virtual-text'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

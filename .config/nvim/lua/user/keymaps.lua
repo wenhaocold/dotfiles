@@ -74,7 +74,11 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
+function my_nvim_tree_toggle()
+    if require'nvim-tree.view'.is_visible() then
+        
+    end
+end
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
@@ -108,14 +112,21 @@ keymap("n", "ss", ":HopChar2<cr>", opts)
 keymap("n", "sl", ":HopLine<cr>", opts)
 
 -- nvim-dap
-keymap('n', '<leader>dct', '<cmd>lua require"dap".continue()<CR>', opts)
-keymap('n', '<leader>dsv', '<cmd>lua require"dap".step_over()<CR>', opts)
-keymap('n', '<leader>dsi', '<cmd>lua require"dap".step_into()<CR>', opts)
-keymap('n', '<leader>dso', '<cmd>lua require"dap".step_out()<CR>', opts)
+-- keymap('n', '<leader>dct', '<cmd>lua require"dap".continue()<CR>', opts)
+-- keymap('n', '<leader>dsv', '<cmd>lua require"dap".step_over()<CR>', opts)
+-- keymap('n', '<leader>dsi', '<cmd>lua require"dap".step_into()<CR>', opts)
+-- keymap('n', '<leader>dso', '<cmd>lua require"dap".step_out()<CR>', opts)
+
+keymap('n', '<leader>dre', '<cmd>lua require"dap".repl.close()<CR>', opts)
 keymap('n', '<leader>db', '<cmd>lua require"dap".toggle_breakpoint()<CR>', opts)
+keymap('n', '<F5>', '<cmd>lua require"dap".continue()<CR>', opts)
+keymap('n', '<F17>', '<cmd>lua require"dap".terminate()<CR>', opts) -- F17 -> Shift + F5
+keymap('n', '<F10>', '<cmd>lua require"dap".step_over()<CR>', opts)
+keymap('n', '<F11>', '<cmd>lua require"dap".step_into()<CR>', opts)
+keymap('n', '<F12>', '<cmd>lua require"dap".step_out()<CR>', opts)
 
 keymap('n', '<leader>dsc', '<cmd>lua require"dap.ui.variables".scopes()<CR>', opts)
-keymap('n', '<leader>dhh', '<cmd>lua require"dap.ui.variables".hover()<CR>', opts)
+keymap('n', '<leader>dh', '<cmd>lua require"dapui".eval()<CR>', opts)
 keymap('v', '<leader>dhv', '<cmd>lua require"dap.ui.variables".visual_hover()<CR>', opts)
 
 keymap('n', '<leader>duh', '<cmd>lua require"dap.ui.widgets".hover()<CR>', opts)
