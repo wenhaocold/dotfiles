@@ -123,6 +123,8 @@ return packer.startup(function(use)
   use "mfussenegger/nvim-dap"
   use "rcarriga/nvim-dap-ui"
   use "nvim-telescope/telescope-dap.nvim"
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'mfussenegger/nvim-dap-python'
 
   -- dashboard-nvim
   use "glepnir/dashboard-nvim"
@@ -144,7 +146,18 @@ return packer.startup(function(use)
 
   use "folke/todo-comments.nvim"
     use 'mechatroner/rainbow_csv'
- use 'theHamsta/nvim-dap-virtual-text'
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function ()
+        require'colorizer'.setup()
+    end
+  }
+  use {
+    'karb94/neoscroll.nvim',
+    config = function ()
+        require'neoscroll'.setup()
+    end
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
