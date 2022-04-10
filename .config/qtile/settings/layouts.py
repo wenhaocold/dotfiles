@@ -11,8 +11,8 @@ from .theme import colors
 
 layout_conf = {
     'border_focus': colors['focus'][0],
-    'border_width': 4,
-    'margin': 4
+    'border_width': 6,
+    'margin': 6
 }
 
 layouts = [
