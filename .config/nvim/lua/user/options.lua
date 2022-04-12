@@ -26,6 +26,7 @@ local options = {
   shiftwidth = 4,                          -- the number of spaces inserted for each indentation
   tabstop = 4,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
+  cursorcolumn = true,                     -- highlight the current column
   number = true,                           -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 2,                         -- set number column width to 2 {default 4}
@@ -50,5 +51,12 @@ vim.cmd [[
   augroup YankHighlight
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+  augroup end
+]]
+
+vim.cmd [[
+  augroup SetCC
+    autocmd!
+    autocmd FileType python :set cc=80
   augroup end
 ]]
