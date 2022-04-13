@@ -11,7 +11,11 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-
+    layout_strategy = "vertical",
+    layout_config = {
+          vertical = { width = 0.5 }
+          -- other layout configuration here
+        },
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
