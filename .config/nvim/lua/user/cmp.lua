@@ -106,6 +106,7 @@ cmp.setup {
         buffer = "[Buffer]",
         path = "[Path]",
         spell = "[Spell]",
+        orgmode = "[Orgmode]",
       })[entry.source.name]
       return vim_item
     end,
@@ -116,6 +117,7 @@ cmp.setup {
     { name = "buffer" },
     { name = "path" },
     { name = "spell" },
+    { name = "orgmode" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
