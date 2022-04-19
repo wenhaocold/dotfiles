@@ -12,7 +12,7 @@ from .theme import colors
 layout_conf = {
     'border_focus': colors['focus'][0],
     'border_width': 6,
-    'margin': 6
+    'margin': 13
 }
 
 layouts = [
