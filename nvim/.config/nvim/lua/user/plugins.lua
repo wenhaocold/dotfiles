@@ -86,6 +86,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use 'p00f/nvim-ts-rainbow'
 
@@ -162,6 +163,7 @@ return packer.startup(function(use)
   -- orgmode
   use 'nvim-orgmode/orgmode'
   use "akinsho/org-bullets.nvim"
+  use 'anuvyklack/pretty-fold.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
