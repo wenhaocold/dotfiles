@@ -60,3 +60,11 @@ vim.cmd [[
     autocmd FileType python :set cc=80
   augroup end
 ]]
+
+vim.cmd [[
+  augroup LuaIndent
+    autocmd!
+    autocmd FileType lua :setlocal shiftwidth=2
+    autocmd FileType lua :setlocal tabstop=2
+  augroup end
+]]
