@@ -26,6 +26,11 @@ lsp_installer.on_server_ready(function(server)
 	 	opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 	 end
 
+	 if server.name == "pylsp" then
+	 	local pylsp_opts = require("user.lsp.settings.pylsp")
+	 	opts = vim.tbl_deep_extend("force", pylsp_opts, opts)
+	 end
+
 	 if server.name == "clangd" then
 	 	local clangd_opts = require("user.lsp.settings.clangd")
 	 	opts = vim.tbl_deep_extend("force", clangd_opts, opts)
