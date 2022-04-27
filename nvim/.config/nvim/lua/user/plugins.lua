@@ -92,6 +92,7 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "sindrets/diffview.nvim"
 
   -- zk
   use "mickael-menu/zk-nvim"
@@ -164,6 +165,7 @@ return packer.startup(function(use)
   use 'nvim-orgmode/orgmode'
   use "akinsho/org-bullets.nvim"
   use 'anuvyklack/pretty-fold.nvim'
+  use 'TimUntersberger/neogit'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
