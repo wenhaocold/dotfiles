@@ -54,17 +54,24 @@ vim.cmd [[
   augroup end
 ]]
 
-vim.cmd [[
-  augroup SetCC
-    autocmd!
-    autocmd FileType python :set cc=80
-  augroup end
-]]
+local lua_mode_setting = function()
+  local lua_mode_group = vim.api.nvim_create_augroup("lua_mode", {clear=true})
+  local lua_mode = function ()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end
+  vim.api.nvim_create_autocmd("FileType lua", {callback=lua_mode, group=lua_mode_group})
+end
 
-vim.cmd [[
-  augroup LuaIndent
-    autocmd!
-    autocmd FileType lua :setlocal shiftwidth=2
-    autocmd FileType lua :setlocal tabstop=2
-  augroup end
-]]
+local python_mode_setting = function()
+  local python_mode_group = vim.api.nvim_create_augroup("python_mode", {clear=true})
+  local python_mode = function ()
+    vim.opt_local.cc = "80"
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+  end
+  vim.api.nvim_create_autocmd("FileType python", {callback=python_mode, group=python_mode_group})
+end
+
+lua_mode_setting()
+python_mode_setting()
