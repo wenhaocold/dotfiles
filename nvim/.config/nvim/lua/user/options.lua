@@ -54,24 +54,43 @@ vim.cmd [[
   augroup end
 ]]
 
-local lua_mode_setting = function()
+local yaml_mode_setting = function ()
+  local yaml_mode_group = vim.api.nvim_create_augroup("yaml_mode", {clear=true})
+  local yaml_mode = function ()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end
+vim.api.nvim_create_autocmd({"FileType"}, {pattern="yaml", callback=yaml_mode, group=yaml_mode_group})
+end
+
+local lua_mode_setting = function ()
   local lua_mode_group = vim.api.nvim_create_augroup("lua_mode", {clear=true})
   local lua_mode = function ()
     vim.opt_local.shiftwidth = 2
     vim.opt_local.tabstop = 2
   end
-  vim.api.nvim_create_autocmd("FileType lua", {callback=lua_mode, group=lua_mode_group})
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="lua", callback=lua_mode, group=lua_mode_group})
 end
 
-local python_mode_setting = function()
+local python_mode_setting = function ()
   local python_mode_group = vim.api.nvim_create_augroup("python_mode", {clear=true})
   local python_mode = function ()
     vim.opt_local.cc = "80"
     vim.opt_local.shiftwidth = 4
     vim.opt_local.tabstop = 4
   end
-  vim.api.nvim_create_autocmd("FileType python", {callback=python_mode, group=python_mode_group})
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="python", callback=python_mode, group=python_mode_group})
 end
 
+local make_mode_setting = function ()
+  local make_mode_group = vim.api.nvim_create_augroup("make_mode", {clear=true})
+  local make_mode = function ()
+    vim.opt_local.expandtab=false
+  end
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="make", callback=make_mode, group=make_mode_group})
+end
+
+yaml_mode_setting()
 lua_mode_setting()
 python_mode_setting()
+make_mode_setting()
