@@ -166,6 +166,9 @@ return packer.startup(function(use)
   use "akinsho/org-bullets.nvim"
   use 'anuvyklack/pretty-fold.nvim'
   use 'TimUntersberger/neogit'
+
+  -- code outline
+  use 'simrat39/symbols-outline.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
