@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use "ellisonleao/gruvbox.nvim"
   use 'folke/tokyonight.nvim'
+  use 'Mofiqul/dracula.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -169,6 +170,11 @@ return packer.startup(function(use)
 
   -- code outline
   use 'simrat39/symbols-outline.nvim'
+
+  use {
+      'glacambre/firenvim',
+      run = function() vim.fn['firenvim#install'](0) end 
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
