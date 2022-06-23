@@ -175,6 +175,10 @@ return packer.startup(function(use)
       'glacambre/firenvim',
       run = function() vim.fn['firenvim#install'](0) end 
   }
+  
+  -- latex
+  use 'lervag/vimtex'
+  use 'hrsh7th/cmp-omni'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
