@@ -90,7 +90,16 @@ local make_mode_setting = function ()
   vim.api.nvim_create_autocmd({"FileType"}, {pattern="make", callback=make_mode, group=make_mode_group})
 end
 
+local latex_mode_setting = function ()
+  local latex_mode_group = vim.api.nvim_create_augroup("latex_mode", {clear=true})
+  local latex_mode = function ()
+    vim.opt_local.linebreak=true
+  end
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="tex", callback=latex_mode, group=latex_mode_group})
+end
+
 yaml_mode_setting()
 lua_mode_setting()
 python_mode_setting()
 make_mode_setting()
+latex_mode_setting()
