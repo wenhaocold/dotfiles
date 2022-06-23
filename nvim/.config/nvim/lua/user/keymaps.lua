@@ -151,4 +151,7 @@ keymap('n', '<leader>dui', '<cmd>lua require"dapui".toggle()<CR>', opts)
 if (vim.o.wrap) then
   keymap("n", "j", "gj", opts)
   keymap("n", "k", "gk", opts)
+  keymap("n", "0", "g0", opts)
+  keymap("v", "j", "gj", opts)
+  keymap("v", "k", "gk", opts)
 end
