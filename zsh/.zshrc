@@ -72,6 +72,13 @@ if [ -d "$HOME/local_install" ]; then
 fi
 # }}}
 
+# >>> cross-compile tools >>> {{{
+if [ -d "$HOME/cross_tools" ]; then
+    export CROSS_COMPILE_TOOLS=$HOME/cross_tools
+    export PATH=$CROSS_COMPILE_TOOLS/bin:$PATH
+fi
+# }}}
+
 # >>> cuda >>> {{{
 if [ -d "/usr/local/cuda" ]; then
     export CUDA_PATH="/usr/local/cuda" 
