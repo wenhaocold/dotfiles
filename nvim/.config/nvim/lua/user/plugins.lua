@@ -179,6 +179,8 @@ return packer.startup(function(use)
   -- latex
   use 'lervag/vimtex'
   use 'hrsh7th/cmp-omni'
+
+  use 'gelguy/wilder.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
