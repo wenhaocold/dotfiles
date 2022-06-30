@@ -148,6 +148,10 @@ keymap('n', '<leader>df', '<cmd>lua require"telescope".extensions.dap.frames{}<C
 -- dap-ui
 keymap('n', '<leader>dui', '<cmd>lua require"dapui".toggle()<CR>', opts)
 
+-- symbols-outline
+keymap('n', '<leader>t', ":SymbolsOutline<CR>", opts)
+
+
 if (vim.o.wrap) then
   keymap("n", "j", "gj", opts)
   keymap("n", "k", "gk", opts)
