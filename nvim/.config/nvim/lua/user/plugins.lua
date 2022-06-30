@@ -94,14 +94,7 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "sindrets/diffview.nvim"
-
-  -- zk
-  use "mickael-menu/zk-nvim"
-
-  -- glow.nvim
-  use "ellisonleao/glow.nvim"
-
-  use 'davidgranstrom/nvim-markdown-preview'
+  use 'TimUntersberger/neogit'
 
   -- easy motion
   -- use 'easymotion/vim-easymotion'
@@ -132,23 +125,12 @@ return packer.startup(function(use)
 
   -- dashboard-nvim
   use "glepnir/dashboard-nvim"
-  -- -- which-key
-  -- use {
-  --   "folke/which-key.nvim",
-  --   config = function()
-  --     require("which-key").setup {
-  --       -- your configuration comes here
-  --       -- or leave it empty to use the default settings
-  --       -- refer to the configuration section below
-  --     }
-  --   end
-  -- }
 
   -- nvim-scrollbar
   use "petertriho/nvim-scrollbar"
 
   use "folke/todo-comments.nvim"
-    use 'mechatroner/rainbow_csv'
+  use 'mechatroner/rainbow_csv'
   use {
     'norcalli/nvim-colorizer.lua',
     config = function ()
@@ -165,20 +147,14 @@ return packer.startup(function(use)
   -- orgmode
   use 'nvim-orgmode/orgmode'
   use "akinsho/org-bullets.nvim"
+
   use 'anuvyklack/pretty-fold.nvim'
-  use 'TimUntersberger/neogit'
 
   -- code outline
   use 'simrat39/symbols-outline.nvim'
 
-  use {
-      'glacambre/firenvim',
-      run = function() vim.fn['firenvim#install'](0) end 
-  }
-  
   -- latex
   use 'lervag/vimtex'
-  use 'hrsh7th/cmp-omni'
 
   use 'gelguy/wilder.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
