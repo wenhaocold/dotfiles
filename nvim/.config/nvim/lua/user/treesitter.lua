@@ -14,10 +14,11 @@ configs.setup {
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "org" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = true,
+    additional_vim_regex_highlighting = false,
   },
 
-  indent = { enable = true, disable = { "yaml" } },
+  -- NOTE: I don't know why there is a indetation problem in c or cpp file when i enable indent functionality of treesitter.
+  indent = { enable = true, disable = { "yaml", "c", "cpp" } },
 
   context_commentstring = {
     enable = true,
