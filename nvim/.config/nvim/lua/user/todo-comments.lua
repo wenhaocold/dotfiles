@@ -19,6 +19,7 @@ todo_comments.setup {
     WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
     PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
     NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+    IMPORTANT = { icon = " ", color = "important"},
   },
   merge_keywords = true, -- when true, custom keywords will be merged with the defaults
   -- highlighting of the line containing the todo comment
@@ -41,6 +42,7 @@ todo_comments.setup {
     warning = { "DiagnosticWarning", "WarningMsg", "#FBBF24" },
     info = { "DiagnosticInfo", "#2563EB" },
     hint = { "DiagnosticHint", "#10B981" },
+    important = { "Important", "#7C3AED" },
     default = { "Identifier", "#7C3AED" },
   },
   search = {
