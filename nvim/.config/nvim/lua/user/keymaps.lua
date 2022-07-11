@@ -83,8 +83,10 @@ end
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Telescope
-keymap("n", "<leader>f", ":Telescope find_files<cr>", opts)
-keymap("n", "<leader>b", ":Telescope buffers<cr>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
+keymap("n", "<leader>fl", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 
 -- Search
 keymap("n", "<leader>l", ":noh<cr>", opts)
