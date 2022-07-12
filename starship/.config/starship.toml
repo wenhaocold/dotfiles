@@ -1,13 +1,15 @@
 format = """
-[](#9A348E)\
+$localip\
+$conda\
+$memory_usage
 $username\
-[](bg:#DA627D fg:#9A348E)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
 $git_branch\
 $git_status\
 [](fg:#FCA17D bg:#86BBD8)\
 $c\
+$python\
+$lua\
 $elixir\
 $elm\
 $golang\
@@ -21,36 +23,41 @@ $rust\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
-[](fg:#06969A bg:#33658A)\
-$localip\
-[ ](fg:#33658A)\
-$shlvl\
+[  ](fg:#33658A)\
 \n\
+$jobs\
 $character
 """
 
+# right_format = """ 
+# [ ](fg:#76BA99)\
+# $localip\
+# [](fg:#CED89E bg:#76BA99)\
+# $conda
+# [](fg:#CED89E)
+# \n\
+# """
+
 # Disable the blank line at the start of the prompt
-# add_newline = false
+add_newline = false
 
+[character]
+success_symbol = "[➜](bold green)"
 
-[shlvl]
-disabled = false
-format = "$shlvl level(s) down"
-threshold = 3
-
-[character] # “character”是我们正在配置的组件
-success_symbol = "[➜](bold green)" # 设置“success_symbol” 字段为绿色加粗的“➜”
+[jobs]
+symbol = " "
+format = "[$symbol$number]($style)"
 
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
 style_user = "bg:#9A348E"
 style_root = "bg:#9A348E"
-format = '[$user ]($style)'
+format = '[](#9A348E)[  $user ]($style)' # 
 
 [directory]
 style = "bg:#DA627D"
-format = "[ $path ]($style)"
+format = "[](bg:#DA627D fg:#9A348E)[ $path ]($style)[](fg:#DA627D bg:#FCA17D)"
 truncation_length = 8
 # truncation_symbol = "…/"
 truncate_to_repo = true
@@ -63,11 +70,12 @@ truncate_to_repo = true
 "Music" = " "
 "Pictures" = " "
 "workspace" = " "
-".config" = " "
+".config" = " "
 "nvim" = " "
 "kitty" = " "
 "qtile" = " "
 "googledriver" = " "
+"dotfiles" = " "
 # Keep in mind that the order matters. For example:
 # "Important Documents" = "  "
 # will not be replaced, because "Documents" was already substituted before.
@@ -77,14 +85,36 @@ truncate_to_repo = true
 [localip]
 disabled = false
 ssh_only = false
-style = "bg:#33658A"
-format = "[[  $localipv4](bg:#33658A)]($style)"
+style = " bg:#76BA99"
+format = "[](fg:#76BA99)[  $localipv4 ]($style)"
+
+[conda]
+symbol = "🅒  "
+style = " bg:#CED89E"
+format = "[](fg:#CED89E bg:#76BA99)[ $symbol$environment]($style)"
+
+[memory_usage]
+threshold = 1
+symbol = "  "
+format = "[](fg:#76BA99 bg:#CED89E)[ $symbol${ram}]($style)[](fg:#76BA99)"
+style = " bg:#76BA99"
+disabled = false
 
 
 [c]
 symbol = " "
 style = "bg:#86BBD8"
-format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
+format = '[[ $symbol($version) ](bg:#86BBD8)]($style)'
+
+[python]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol($version) ](bg:#86BBD8)]($style)'
+
+[lua]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[[ $symbol($version) ](bg:#86BBD8)]($style)'
 
 [docker_context]
 symbol = " "
@@ -102,7 +132,7 @@ style = "bg:#86BBD8"
 format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
 [git_branch]
-symbol = ""
+symbol = " "
 style = "bg:#FCA17D"
 format = '[[ $symbol $branch ](bg:#FCA17D)]($style)'
 
@@ -149,5 +179,5 @@ format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = '[[ ♥ $time ](bg:#33658A)]($style)'
+format = '[[  $time ](bg:#33658A)]($style)'
 
