@@ -1,7 +1,8 @@
 format = """
 $localip\
 $conda\
-$memory_usage
+$memory_usage\
+$time
 $username\
 $directory\
 $git_branch\
@@ -22,7 +23,6 @@ $rust\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
-$time\
 [  ](fg:#33658A)\
 \n\
 $jobs\
@@ -47,6 +47,30 @@ success_symbol = "[➜](bold green)"
 [jobs]
 symbol = " "
 format = "[$symbol$number]($style)"
+
+[localip]
+disabled = false
+ssh_only = false
+style = " bg:#76BA99"
+format = "[](fg:#76BA99)[  $localipv4 ]($style)"
+
+[conda]
+symbol = "🅒  "
+style = " bg:#CED89E"
+format = "[](fg:#CED89E bg:#76BA99)[ $symbol$environment ]($style)"
+
+[memory_usage]
+threshold = 1
+symbol = "  "
+format = "[](fg:#76BA99 bg:#CED89E)[ $symbol${ram} ]($style)"
+style = " bg:#76BA99"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[](fg:#33658A bg:#76BA99)[[  $time ](bg:#33658A)]($style)[](fg:#33658A)'
 
 # You can also replace your username with a neat symbol like  to save some space
 [username]
@@ -82,24 +106,6 @@ truncate_to_repo = true
 # So either put "Important Documents" before "Documents" or use the substituted version:
 # "Important  " = "  "
 
-[localip]
-disabled = false
-ssh_only = false
-style = " bg:#76BA99"
-format = "[](fg:#76BA99)[  $localipv4 ]($style)"
-
-[conda]
-symbol = "🅒  "
-style = " bg:#CED89E"
-format = "[](fg:#CED89E bg:#76BA99)[ $symbol$environment]($style)"
-
-[memory_usage]
-threshold = 1
-symbol = "  "
-format = "[](fg:#76BA99 bg:#CED89E)[ $symbol${ram}]($style)[](fg:#76BA99)"
-style = " bg:#76BA99"
-disabled = false
-
 
 [c]
 symbol = " "
@@ -134,9 +140,19 @@ format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 [git_branch]
 symbol = " "
 style = "bg:#FCA17D"
-format = '[[ $symbol $branch ](bg:#FCA17D)]($style)'
+format = '[[ $symbol $branch](bg:#FCA17D)]($style)'
 
 [git_status]
+conflicted = " ⚔️"
+ahead = " 🏎️💨×${count}"
+behind = " 🐢×${count}"
+diverged = " 🔱🏎️💨×${ahead_count} 🐢 ×${behind_count}"
+untracked = " 🛤️×${count}"
+stashed = " 📦"
+modified = " 📝×${count}"
+staged = " 🗃️×${count}"
+renamed = " 📛×${count}"
+deleted = " 🗑️×${count}"
 style = "bg:#FCA17D"
 format = '[[($all_status$ahead_behind )](bg:#FCA17D)]($style)'
 
@@ -175,9 +191,4 @@ symbol = ""
 style = "bg:#86BBD8"
 format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
-format = '[[  $time ](bg:#33658A)]($style)'
 
