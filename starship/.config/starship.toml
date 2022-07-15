@@ -1,4 +1,5 @@
 format = """
+[](fg:#76BA99)\
 $localip\
 $conda\
 $memory_usage\
@@ -22,8 +23,7 @@ $nim\
 $rust\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
-[  ](fg:#33658A)\
+[  ](fg:#06969A)\
 \n\
 $jobs\
 $character
@@ -50,9 +50,9 @@ format = "[$symbol$number]($style)"
 
 [localip]
 disabled = false
-ssh_only = false
+ssh_only = true
 style = " bg:#76BA99"
-format = "[](fg:#76BA99)[  $localipv4 ]($style)"
+format = "[  $localipv4 ]($style)"
 
 [conda]
 symbol = "🅒  "
@@ -143,16 +143,16 @@ style = "bg:#FCA17D"
 format = '[[ $symbol $branch](bg:#FCA17D)]($style)'
 
 [git_status]
-conflicted = " ⚔️"
-ahead = " 🏎️💨×${count}"
-behind = " 🐢×${count}"
-diverged = " 🔱🏎️💨×${ahead_count} 🐢 ×${behind_count}"
-untracked = " 🛤️×${count}"
-stashed = " 📦"
-modified = " 📝×${count}"
-staged = " 🗃️×${count}"
-renamed = " 📛×${count}"
-deleted = " 🗑️×${count}"
+# conflicted = " ⚔️"
+# ahead = " 🏎️💨×${count}"
+# behind = " 🐢×${count}"
+# diverged = " 🔱🏎️💨×${ahead_count} 🐢 ×${behind_count}"
+# untracked = " 🛤️×${count}"
+# stashed = " 📦"
+# modified = " 📝×${count}"
+# staged = " 🗃️×${count}"
+# renamed = " 📛×${count}"
+# deleted = " 🗑️×${count}"
 style = "bg:#FCA17D"
 format = '[[($all_status$ahead_behind )](bg:#FCA17D)]($style)'
 
