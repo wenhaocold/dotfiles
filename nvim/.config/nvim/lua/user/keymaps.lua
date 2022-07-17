@@ -74,11 +74,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-function my_nvim_tree_toggle()
-    if require'nvim-tree.view'.is_visible() then
-        
-    end
-end
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
@@ -87,6 +82,8 @@ keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>fl", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
+keymap("n", "<leader>fd", ":Telescope diagnostics<cr>", opts)
+keymap("n", "gr", ":Telescope lsp_references<cr>", opts)
 
 -- Search
 keymap("n", "<leader>l", ":noh<cr>", opts)
