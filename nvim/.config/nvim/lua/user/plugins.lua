@@ -161,6 +161,7 @@ return packer.startup(function(use)
   use "folke/lua-dev.nvim"
   
   use 'sunjon/shade.nvim'
+  use 'folke/twilight.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
