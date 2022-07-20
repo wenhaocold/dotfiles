@@ -115,3 +115,14 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export EDITOR="$(which nvim)"
 
+# ========================================= function ====================================================
+cpolar-ssh ()
+{
+    cpolar tcp 22 -remote-addr=1.tcp.cpolar.cn:24737
+}
+
+cpolar-vnc ()
+{
+    cpolar tcp 5901 -remote-addr=1.tcp.cpolar.cn:22252
+}
+# ========================================= function ====================================================
