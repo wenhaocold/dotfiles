@@ -54,5 +54,6 @@ fi
 nitrogen --restore &
 fcitx5 &
 picom &
+keyd-application-mapper -d
 # exec dwm
 exec qtile start
