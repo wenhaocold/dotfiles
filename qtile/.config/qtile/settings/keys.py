@@ -56,7 +56,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "p", lazy.spawn("rofi -show drun")),
+    (["control"], "space", lazy.spawn("rofi -show drun")),
 
     # Window Nav
     ([mod, "shift"], "p", lazy.spawn("rofi -show")),
