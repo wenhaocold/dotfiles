@@ -1,8 +1,9 @@
 format = """
 [](fg:#76BA99)\
-$localip\
-$conda\
 $memory_usage\
+$conda\
+[](fg:#76BA99 bg:#CED89E)\
+$localip\
 $time
 $username\
 $directory\
@@ -52,7 +53,7 @@ format = "[$symbol$number]($style)"
 disabled = false
 ssh_only = true
 style = " bg:#76BA99"
-format = "[  $localipv4 ]($style)"
+format = "[   $localipv4 ]($style)"
 
 [conda]
 symbol = "🅒  "
@@ -62,7 +63,7 @@ format = "[](fg:#CED89E bg:#76BA99)[ $symbol$environment ]($style)"
 [memory_usage]
 threshold = 1
 symbol = "  "
-format = "[](fg:#76BA99 bg:#CED89E)[ $symbol${ram} ]($style)"
+format = "[$symbol${ram} ]($style)"
 style = " bg:#76BA99"
 disabled = false
 
