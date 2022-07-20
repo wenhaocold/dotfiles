@@ -25,6 +25,12 @@ antigen apply
 alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias ls='exa --icons'
 alias ra='ranger'
+alias srk='sudo systemctl restart keyd.service'
+alias dils='docker image ls'
+alias dirm='docker image rm'
+alias dcls='docker container ls'
+alias dcla='docker container ls --all'
+alias dcrm='docker container rm'
 
 # eval
 ## for starship
