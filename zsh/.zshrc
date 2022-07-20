@@ -104,3 +104,6 @@ if [ -d "$HOME/.emacs.d/bin" ]; then
     export PATH=$HOME/.emacs.d/bin:$PATH  
 fi
 
+# bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
