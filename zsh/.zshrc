@@ -24,6 +24,7 @@ antigen apply
 
 alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias ls='exa --icons'
+alias la='ls -a'
 alias ra='ranger'
 alias srk='sudo systemctl restart keyd.service'
 alias dils='docker image ls'
