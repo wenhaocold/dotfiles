@@ -26,5 +26,5 @@ require "user.latex"
 require "user.indent-blankline"
 require "user.treesitter-context"
 require "user.luadev"
-require "user.shade"
+--[[ require "user.shade" ]]
 require "user.twilight"
