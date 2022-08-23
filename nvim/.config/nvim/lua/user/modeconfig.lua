@@ -30,8 +30,8 @@ local c_mode_setting = function ()
   local c_mode_group = vim.api.nvim_create_augroup("c_mode", {clear=true})
   local c_mode = function ()
     vim.opt_local.cc = "80"
-    vim.opt_local.shiftwidth = 4
-    vim.opt_local.tabstop = 4
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
     vim.opt_local.expandtab=false
   end
   vim.api.nvim_create_autocmd({"FileType"}, {pattern={"c", "cpp"}, callback=c_mode, group=c_mode_group})
