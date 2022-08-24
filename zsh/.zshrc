@@ -32,7 +32,9 @@ alias dirm='docker image rm'
 alias dcls='docker container ls'
 alias dcla='docker container ls --all'
 alias dcrm='docker container rm'
-
+if [ -L ~/ebook ]; then
+    alias ebook='ranger ~/ebook'
+fi
 # eval
 ## for starship
 eval "$(starship init zsh)"
