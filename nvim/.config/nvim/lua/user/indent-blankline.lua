@@ -4,7 +4,7 @@ if not indentline_status_ok then
 end
 
 vim.opt.listchars:append("eol:↴")
-vim.opt.listchars:append("tab:<->")
+--[[ vim.opt.listchars:append("tab:<->") ]]
 vim.opt.list = true
 
 indentline.setup {
@@ -12,7 +12,7 @@ indentline.setup {
   show_current_context_start = true,
   show_end_of_line = true,
   char_list = {'|', '¦', '┆', '┊'},
-  show_first_indent_level = false,
+  show_first_indent_level = true,
   -- char_list_blankline = {'|', '¦', '┆', '┊'}
   --
   -- context_char = '.' --'' --'' --'' --'' --'' -- ''
