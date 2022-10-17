@@ -25,6 +25,6 @@ require "user.symbols_outline"
 require "user.latex"
 require "user.indent-blankline"
 require "user.treesitter-context"
-require "user.luadev"
+require "user.neodev"
 --[[ require "user.shade" ]]
 require "user.twilight"
