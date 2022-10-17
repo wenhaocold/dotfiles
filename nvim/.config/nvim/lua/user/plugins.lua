@@ -163,7 +163,7 @@ return packer.startup(function(use)
   -- latex
   use 'lervag/vimtex'
 
-  use "folke/lua-dev.nvim"
+  use "folke/neodev.nvim"
   
   use 'sunjon/shade.nvim'
   use 'folke/twilight.nvim'

@@ -1,9 +1,9 @@
-local luadev_ok, luadev = pcall(require, "lua-dev")
-if not luadev_ok then
+local neodev_ok, neodev = pcall(require, "neodev")
+if not neodev_ok then
   return
 end
 
-luadev.setup {
+neodev.setup {
   library = {
     vimruntime = true, -- runtime path
     types = true, -- full signature, docs and completion of vim.api, vim.treesitter, vim.lsp and others
@@ -20,4 +20,4 @@ luadev.setup {
 }
 
 local lspconfig = require('lspconfig')
-lspconfig.sumneko_lua.setup(luadev)
+lspconfig.sumneko_lua.setup(neodev)
