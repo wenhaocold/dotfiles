@@ -28,3 +28,5 @@ require "user.treesitter-context"
 require "user.neodev"
 --[[ require "user.shade" ]]
 require "user.twilight"
+require "user.xkbswitch"
+
