@@ -29,4 +29,5 @@ require "user.neodev"
 --[[ require "user.shade" ]]
 require "user.twilight"
 require "user.xkbswitch"
+require "user.luasnip"
 
