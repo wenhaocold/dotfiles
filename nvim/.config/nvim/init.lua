@@ -30,4 +30,5 @@ require "user.neodev"
 require "user.twilight"
 require "user.xkbswitch"
 require "user.luasnip"
+require "user.oscyank"
 
