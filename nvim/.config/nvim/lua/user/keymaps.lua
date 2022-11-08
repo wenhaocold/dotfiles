@@ -32,6 +32,16 @@ keymap("n", "<leader>q", ":Bdelete<cr>", opts)
 -- keymap("n", "<C-k>", "<C-w>k", opts)
 -- keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Configuration
+require('Navigator').setup()
+
+-- Keybindings
+vim.keymap.set('n', "<A-h>", '<CMD>NavigatorLeft<CR>')
+vim.keymap.set('n', "<A-l>", '<CMD>NavigatorRight<CR>')
+vim.keymap.set('n', "<A-k>", '<CMD>NavigatorUp<CR>')
+vim.keymap.set('n', "<A-j>", '<CMD>NavigatorDown<CR>')
+vim.keymap.set('n', "<A-p>", '<CMD>NavigatorPrevious<CR>')
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
