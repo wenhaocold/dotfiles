@@ -19,7 +19,7 @@
 -- -- set italic comment
 -- vim.g.dracula_italic_comment = true
 
-vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 vim.cmd[[colorscheme catppuccin]]
 local catppuccin = require("catppuccin")
 
