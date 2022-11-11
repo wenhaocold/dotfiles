@@ -16,16 +16,6 @@ local lua_mode_setting = function ()
   vim.api.nvim_create_autocmd({"FileType"}, {pattern="lua", callback=lua_mode, group=lua_mode_group})
 end
 
-local python_mode_setting = function ()
-  local python_mode_group = vim.api.nvim_create_augroup("python_mode", {clear=true})
-  local python_mode = function ()
-    vim.opt_local.cc = "80"
-    vim.opt_local.shiftwidth = 4
-    vim.opt_local.tabstop = 4
-  end
-  vim.api.nvim_create_autocmd({"FileType"}, {pattern="python", callback=python_mode, group=python_mode_group})
-end
-
 local c_mode_setting = function ()
   local c_mode_group = vim.api.nvim_create_augroup("c_mode", {clear=true})
   local c_mode = function ()
@@ -65,7 +55,6 @@ end
 
 yaml_mode_setting()
 lua_mode_setting()
-python_mode_setting()
 c_mode_setting()
 make_mode_setting()
 latex_mode_setting()
