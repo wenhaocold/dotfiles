@@ -43,6 +43,17 @@ eval "$(starship init zsh)"
 # cmd
 neofetch
 
+# lazygit
+if command -v lazygit >/dev/null; then
+    if [ -f "$HOME/.config/lazygit/config.yml" ]; then
+        export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
+    else
+        echo "config file for lazygit is not exist."
+    fi
+else
+    echo "lazygit is not installed"
+fi
+
 # config for zsh-vim-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 ZVM_VI_EDITOR=vi
