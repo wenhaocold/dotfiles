@@ -117,7 +117,7 @@ fi
 # bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-export EDITOR="$(which nvim)"
+command -v nvim >/dev/null && export EDITOR="$(which nvim)" || echo "neovim is not installed"
 
 # ========================================= function ====================================================
 cpolar-ssh ()
