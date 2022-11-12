@@ -23,3 +23,13 @@ if command -v lazygit >/dev/null && [[ -n $DOTFILE_PATH ]]; then
         lazygit -p $DOTFILE_PATH
     }
 fi
+
+vineovim ()
+{
+    vi $NVIM_CONFIG_PATH
+}
+
+vizsh ()
+{
+    vi $ZSH_CONFIG_PATH
+}

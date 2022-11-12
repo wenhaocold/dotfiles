@@ -1,4 +1,9 @@
 
+# CONFIG_PATH:
+export CONFIG_PATH="$HOME/.config"
+export NVIM_CONFIG_PATH="$CONFIG_PATH/nvim"
+export ZSH_CONFIG_PATH="$CONFIG_PATH/zsh"
+
 # EDITOR:
 command -v nvim >/dev/null && export EDITOR="$(which nvim)" || echo "neovim is not installed"
 #
