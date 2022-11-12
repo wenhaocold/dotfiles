@@ -1,3 +1,8 @@
+if [[ ! -f "$HOME/antigen.zsh" ]]; then
+    echo "antigen.zsh is not exist in HOME dirctory, downloading it:"
+    curl -L git.io/antigen > "$HOME/antigen.zsh"
+fi
+
 source $HOME/antigen.zsh
 
 # Load the oh-my-zsh's library.
