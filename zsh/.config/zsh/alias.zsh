@@ -13,6 +13,7 @@ alias la='ls -a'
 _alias ra ranger
 [[ -L "$HOME/ebook" ]] && alias ebook='ranger $HOME/ebook'
 
+_alias tmls tmux ls
 # alias dils='docker image ls'
 # alias dirm='docker image rm'
 # alias dcls='docker container ls'
