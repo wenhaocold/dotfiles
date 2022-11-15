@@ -10,6 +10,8 @@ _alias vi nvim
 _alias lg lazygit
 _alias ls exa --icons
 alias la='ls -a'
+alias ll='ls -l'
+alias lld='ls -ld'
 _alias ra ranger
 [[ -L "$HOME/ebook" ]] && alias ebook='ranger $HOME/ebook'
 
