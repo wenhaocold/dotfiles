@@ -4,7 +4,7 @@ source "$HOME/.config/zsh/plugins.zsh"
 eval "$(starship init zsh)"
 
 # neofetch
-neofetch
+# neofetch
 
 # config for zsh-vim-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
