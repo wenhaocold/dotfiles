@@ -17,11 +17,11 @@ _alias ra ranger
 
 _alias tmls tmux "ls"
 _alias tmat tmux "attach -t"
-# alias dils='docker image ls'
+_alias dils docker "image ls"
 # alias dirm='docker image rm'
-# alias dcls='docker container ls'
-# alias dcla='docker container ls --all'
-# alias dcrm='docker container rm'
+_alias dcls docker "container ls"
+_alias dcla docker "container ls --all"
+_alias dcrm docker "container rm"
 
 # alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 # alias srk='sudo systemctl restart keyd.service'
