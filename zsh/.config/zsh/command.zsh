@@ -33,3 +33,8 @@ vizsh ()
 {
     vi $ZSH_CONFIG_PATH
 }
+
+LFCD="$HOME/.config/lf/lfcd.sh"  #  pre-built binary, make sure to use absolute path
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
