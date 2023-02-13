@@ -10,7 +10,7 @@ end
 
 mason.setup()
 mason_lspconfig.setup {
-    ensure_installed = { "lua_ls", "clangd" },
+    ensure_installed = { "lua_ls", "clangd", "pyright"},
 }
 
 
