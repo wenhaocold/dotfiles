@@ -36,7 +36,7 @@ yabai -m config window_gap     5
 # Border
 yabai -m config window_border               on
 yabai -m config window_border_width         2
-yabai -m config window_border_radius        12
+yabai -m config window_border_radius        10
 yabai -m config active_window_border_color  $bsp_border_color 
 yabai -m config normal_window_border_color  $normal_border_color 
 yabai -m config window_border_blur          on
@@ -65,7 +65,10 @@ yabai -m rule --add app="System Settings"   manage=off
 yabai -m rule --add app="Finder"            manage=off
 yabai -m rule --add app="Font Book"         manage=off
 yabai -m rule --add app="BaiduNetdisk"      manage=off
-yabai -m rule --add app="FileZilla"      manage=off
+yabai -m rule --add app="FileZilla"         manage=off
+yabai -m rule --add app="Raycast"           manage=off
+yabai -m rule --add app="Dash"              manage=off
+yabai -m rule --add app="Shottr"            manage=off
 yabai -m rule --add app="EuDic"             manage=off border=off
 yabai -m rule --add app="Calculator"        manage=off border=off
 
