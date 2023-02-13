@@ -19,7 +19,7 @@ if not lspconfig_ok then
   return
 end
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   local opts = { noremap = true, silent = true }
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
@@ -66,3 +66,9 @@ lspconfig.lua_ls.setup {
 lspconfig.clangd.setup {
   on_attach = on_attach
 }
+
+lspconfig.pyright.setup {
+  on_attach = on_attach
+}
+
+require("user.lsp.ui_config").setup()
