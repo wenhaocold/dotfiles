@@ -10,7 +10,7 @@ end
 
 mason.setup()
 mason_lspconfig.setup {
-    ensure_installed = { "lua_ls", "clangd", "pyright"},
+    ensure_installed = { "lua_ls", "clangd"},
 }
 
 
@@ -44,7 +44,22 @@ local on_attach = function(_, bufnr)
 end
 
 
--- lua lsp config
+
+local opts = {
+  on_attach = on_attach,
+}
+
+-- pylsp config
+local pylsp_opts = require ("user.lsp.settings.pylsp")
+pylsp_opts = vim.tbl_deep_extend("force", pylsp_opts, opts)
+lspconfig.pylsp.setup(pylsp_opts)
+
+-- clangd config
+local clangd_opts = require ("user.lsp.settings.clangd")
+clangd_opts = vim.tbl_deep_extend("force", clangd_opts, opts)
+lspconfig.clangd.setup(clangd_opts)
+
+-- lua_ls config
 local neodev_ok, neodev = pcall(require, "neodev")
 if not neodev_ok then
   return
@@ -52,23 +67,9 @@ end
 neodev.setup({
   -- add any options here, or leave empty to use the default settings
 })
-lspconfig.lua_ls.setup {
-  on_attach = on_attach,
-  settings = {
-    Lua = {
-      completion = {
-        callSnippet = "Replace"
-      }
-    }
-  }
-}
-
-lspconfig.clangd.setup {
-  on_attach = on_attach
-}
-
-lspconfig.pyright.setup {
-  on_attach = on_attach
-}
+local luals_opts = require ("user.lsp.settings.lua_ls")
+luals_opts = vim.tbl_deep_extend("force", luals_opts, opts)
+lspconfig.lua_ls.setup(luals_opts)
 
 require("user.lsp.ui_config").setup()
+require "user.lsp.null-ls"
