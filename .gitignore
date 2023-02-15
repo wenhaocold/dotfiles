@@ -1,3 +1,4 @@
 keyd/.config/keyd/app.log
 keyd/.config/keyd/app.lock
 lazygit/.config/lazygit/state.yml
+tmux/.config/tmux/plugins
