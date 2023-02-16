@@ -20,7 +20,8 @@
 -- vim.g.dracula_italic_comment = true
 
 vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
-vim.cmd[[colorscheme catppuccin]]
+-- vim.cmd[[colorscheme catppuccin]]
+vim.cmd.colorscheme("catppuccin")
 local catppuccin = require("catppuccin")
 
 -- configure it

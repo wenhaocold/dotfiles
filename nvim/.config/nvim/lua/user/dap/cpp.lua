@@ -6,7 +6,7 @@ end
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = 'executable',
-  command = os.getenv('CPPTOOLS_PATH') .. '/extension/debugAdapters/bin/OpenDebugAD7',
+  --[[ command = os.getenv('CPPTOOLS_PATH') .. '/extension/debugAdapters/bin/OpenDebugAD7', ]]
 }
 
 dap.configurations.cpp = {

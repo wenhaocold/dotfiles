@@ -10,7 +10,7 @@ end
 
 mason.setup()
 mason_lspconfig.setup {
-    ensure_installed = { "lua_ls", "clangd"},
+    ensure_installed = { "lua_ls", "clangd", "bashls"},
 }
 
 
@@ -70,6 +70,11 @@ neodev.setup({
 local luals_opts = require ("user.lsp.settings.lua_ls")
 luals_opts = vim.tbl_deep_extend("force", luals_opts, opts)
 lspconfig.lua_ls.setup(luals_opts)
+
+-- bash-language-server
+local bashls_opts = require ("user.lsp.settings.bashls")
+bashls_opts = vim.tbl_deep_extend("force", bashls_opts, opts)
+lspconfig.bashls.setup(bashls_opts)
 
 require("user.lsp.ui_config").setup()
 require "user.lsp.null-ls"

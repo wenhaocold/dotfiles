@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+--[[ local term_opts = { silent = true } ]]
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -33,7 +33,6 @@ keymap("n", "<leader>q", ":Bdelete<cr>", opts)
 -- keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Configuration
-require('Navigator').setup()
 
 -- Keybindings
 vim.keymap.set('n', "<A-h>", '<CMD>NavigatorLeft<CR>')
