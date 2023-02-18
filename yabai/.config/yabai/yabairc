@@ -14,9 +14,6 @@ yabai -m signal --add event=space_changed \
 yabai -m config layout bsp
 yabai -m config --space 6 layout float
 yabai -m config window_placement second_child
-# yabai -m config window_topmost on
-# yabai -m config window_topmost                  on
-# yabai -m config window_shadow                   float
 
 
 # Window Opacity
@@ -39,16 +36,16 @@ yabai -m config window_border_width         2
 yabai -m config window_border_radius        10
 yabai -m config active_window_border_color  $bsp_border_color 
 yabai -m config normal_window_border_color  $normal_border_color 
-yabai -m config window_border_blur          on
 yabai -m config window_border_hidpi         on
 yabai -m config window_border               on
-yabai -m config window_border_blur          on
+yabai -m config window_border_blur          off
 
 
 # Mouse
 yabai -m config mouse_modifier  alt
 yabai -m config mouse_action1   move
 yabai -m config mouse_action2   resize
+yabai -m config mouse_follows_focus on
 
 
 # Space Label
@@ -69,17 +66,25 @@ yabai -m rule --add app="FileZilla"         manage=off
 yabai -m rule --add app="Raycast"           manage=off
 yabai -m rule --add app="Dash"              manage=off
 yabai -m rule --add app="Shottr"            manage=off
+yabai -m rule --add app="ClashX Pro"        manage=off
 yabai -m rule --add app="EuDic"             manage=off border=off
 yabai -m rule --add app="Calculator"        manage=off border=off
+yabai -m rule --add app="Numi"              manage=off border=off grid=4:4:1:1:2:2
 
-yabai -m rule --add app="WeChat"            manage=off space=^6
+yabai -m rule --add app="Orion" title="General" manage=off
+yabai -m rule --add app="Orion" title="Extension" manage=off
+
+yabai -m rule --add app="WeChat"            manage=off space=^6 grid=4:4:1:1:2:2
 yabai -m rule --add app="QQ"                manage=off space=^6
+yabai -m rule --add app="Telegram"          manage=off space=^6
 
-yabai -m rule --add app="Safari"            space=1
-yabai -m rule --add app="Chrome"            space=1
-yabai -m rule --add app="iterm2"            space=2
-yabai -m rule --add app="PDF Expert"        space=3
+yabai -m rule --add app="Safari"            space=^1
+yabai -m rule --add app="Orion"             space=^1
+yabai -m rule --add app="Chrome"            space=^1
+yabai -m rule --add app="iterm2"            space=^2
+yabai -m rule --add app="PDF Expert"        space=^3
 yabai -m rule --add app="Obsidian"          space=^4
+# yabai -m rule --add app="kitty"             opacity=0.9
 
 # Other
 yabai -m config auto_balance off
