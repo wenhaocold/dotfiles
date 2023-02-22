@@ -3,7 +3,11 @@ if not status_ok then
   return
 end
 
-local colors = require("tokyonight.colors").setup()
+local colors_ok, colors = pcall(require, "tokyonight.colors")
+if not colors_ok then
+  return
+end
+
 require("scrollbar").setup({
     handle = {
       color = "#393053",
