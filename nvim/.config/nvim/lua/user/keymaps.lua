@@ -116,10 +116,6 @@ nmap <leader>K <Plug>(quickhl-manual-reset)
 xmap <leader>K <Plug>(quickhl-manual-reset)
 ]]
 
--- hop.nvim
-keymap("n", "ss", ":HopChar2<cr>", opts)
-keymap("n", "sl", ":HopLine<cr>", opts)
-
 -- nvim-dap
 -- keymap('n', '<leader>dct', '<cmd>lua require"dap".continue()<CR>', opts)
 -- keymap('n', '<leader>dsv', '<cmd>lua require"dap".step_over()<CR>', opts)
