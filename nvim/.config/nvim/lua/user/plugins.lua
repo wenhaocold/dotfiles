@@ -105,6 +105,8 @@ return packer.startup(function(use)
   use "sindrets/diffview.nvim"
 
   -- easy motion
+  use 'ggandor/leap.nvim'
+
   -- search
   use 'kevinhwang91/nvim-hlslens'
   use 't9md/vim-quickhl'
