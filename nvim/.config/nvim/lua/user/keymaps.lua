@@ -23,6 +23,9 @@ vim.g.maplocalleader = ","
 keymap("n", "<leader>w", ":w<cr>", opts)
 -- keymap("i", "<leader>w", "<esc>:w<cr>", opts)
 
+keymap("n", "<C-h>", "0", opts)
+keymap("n", "<C-l>", "$", opts)
+
 -- Close buffer
 keymap("n", "<leader>q", ":Bdelete<cr>", opts)
 
