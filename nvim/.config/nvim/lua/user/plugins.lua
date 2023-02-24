@@ -105,7 +105,11 @@ return packer.startup(function(use)
   use "sindrets/diffview.nvim"
 
   -- easy motion
-  use 'ggandor/leap.nvim'
+  --[[ use 'ggandor/leap.nvim' ]]
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+  }
 
   -- search
   use 'kevinhwang91/nvim-hlslens'
