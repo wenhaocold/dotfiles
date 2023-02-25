@@ -46,3 +46,10 @@ gitsigns.setup {
     enable = false,
   },
 }
+
+local opts = { noremap = true, silent = true }
+
+vim.api.nvim_set_keymap("n", "gp", ":Gitsigns preview_hunk<CR>", opts)
+vim.api.nvim_set_keymap("n", "grh", ":Gitsigns reset_hunk<CR>", opts)
+vim.api.nvim_set_keymap("n", "gj", ":Gitsigns next_hunk<CR>", opts)
+vim.api.nvim_set_keymap("n", "gk", ":Gitsigns prev_hunk<CR>", opts)
