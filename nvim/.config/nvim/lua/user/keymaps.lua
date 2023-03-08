@@ -100,16 +100,6 @@ keymap("n", "gr", ":Telescope lsp_references<cr>", opts)
 -- Search
 keymap("n", "<leader>l", ":noh<cr>", opts)
 keymap("n", "<Esc><Esc>", ":noh<cr>", opts)
-vim.cmd [[
-noremap <silent> n <Cmd>execute('normal! ' . v:count1 . 'n')<CR>
-            \<Cmd>lua require('hlslens').start()<CR>
-noremap <silent> N <Cmd>execute('normal! ' . v:count1 . 'N')<CR>
-            \<Cmd>lua require('hlslens').start()<CR>
-noremap * *<Cmd>lua require('hlslens').start()<CR>
-noremap # #<Cmd>lua require('hlslens').start()<CR>
-noremap g* g*<Cmd>lua require('hlslens').start()<CR>
-noremap g# g#<Cmd>lua require('hlslens').start()<CR>
-]]
 
 -- quickhl
 vim.cmd [[
