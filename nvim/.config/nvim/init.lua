@@ -16,7 +16,7 @@ require "user.lualine"
 require "user.toggleterm"
 require "user.dap"
 require "user.dashboard"
-require "user.nvim-scrollbar"
+--[[ require "user.nvim-scrollbar" ]]
 require "user.todo-comments"
 require "user.notification"
 require "user.symbols_outline"
