@@ -150,7 +150,7 @@ keymap('n', '<leader>t', ":SymbolsOutline<CR>", opts)
 
 -- oscyank
 vim.cmd(
-  "nmap <leader>y <Plug>OSCYank"
+  "nmap <leader>y <Plug>OSCYankVisual"
 )
 
 
