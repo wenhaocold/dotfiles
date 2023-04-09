@@ -149,10 +149,7 @@ keymap('n', '<leader>dui', '<cmd>lua require"dapui".toggle()<CR>', opts)
 keymap('n', '<leader>t', ":SymbolsOutline<CR>", opts)
 
 -- oscyank
-vim.cmd(
-  "nmap <leader>y <Plug>OSCYankVisual"
-)
-
+keymap("v", "<leader>y", ":OSCYankVisual<cr>", opts)
 
 if (vim.o.wrap) then
   keymap("n", "j", "gj", opts)
