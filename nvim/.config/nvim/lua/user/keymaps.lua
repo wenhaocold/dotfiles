@@ -96,6 +96,7 @@ keymap("n", "<leader>fl", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fd", ":Telescope diagnostics<cr>", opts)
 keymap("n", "gr", ":Telescope lsp_references<cr>", opts)
+keymap("n", "<leader>fm", ":Telescope vim_bookmarks all<cr>", opts)
 
 -- Search
 keymap("n", "<leader>l", ":noh<cr>", opts)
