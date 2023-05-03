@@ -14,7 +14,7 @@ telescope.setup {
     layout_strategy = "horizontal",
     layout_config = {
       width = 0.8,
-      preview_width = 0.518
+      preview_width = 0.5
     },
     mappings = {
       i = {
