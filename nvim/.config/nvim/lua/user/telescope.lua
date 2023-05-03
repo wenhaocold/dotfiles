@@ -13,7 +13,7 @@ telescope.setup {
     path_display = { "smart" },
     layout_strategy = "horizontal",
     layout_config = {
-      width = 0.8,
+      width = 0.88,
       preview_width = 0.5
     },
     mappings = {
