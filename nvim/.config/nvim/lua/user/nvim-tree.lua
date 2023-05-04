@@ -21,6 +21,8 @@
 --   },
 -- }
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- change default icon
 local status_ok, nvim_web_devicons = pcall(require, "nvim-web-devicons")
@@ -130,7 +132,7 @@ nvim_tree.setup {
     timeout = 500,
   },
   view = {
-    width = 30,
+    width = 20,
     --[[ height = 30, ]]
     hide_root_folder = false,
     side = "left",
