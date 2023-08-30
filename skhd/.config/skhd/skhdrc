@@ -45,6 +45,7 @@ cmd - 5 : yabai -m space --focus 5
 cmd - g : yabai -m space --focus 6
 cmd - 7 : yabai -m space --focus 7
 cmd - r : yabai -m space --focus recent
+alt - t : yabai -m space --focus 7
 # <<<<<<<<<< Space Navigation <<<<<<<<<< 
 
 
@@ -55,6 +56,7 @@ shift + cmd - 4 : yabai -m window --space  4; yabai -m space --focus 4
 shift + cmd - 5 : yabai -m window --space  5; yabai -m space --focus 5
 shift + cmd - g : yabai -m window --space  6; yabai -m space --focus 6
 shift + cmd - 7 : yabai -m window --space  7; yabai -m space --focus 7
+shift + alt - t : yabai -m window --space  7; yabai -m space --focus 7
 
 
 # >>>>>>>>>> Display >>>>>>>>>>
