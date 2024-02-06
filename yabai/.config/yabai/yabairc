@@ -31,14 +31,14 @@ yabai -m config right_padding  3
 yabai -m config window_gap     5
 
 
-# Border
-yabai -m config window_border               off
-yabai -m config window_border_width         3
-yabai -m config window_border_radius        10
-yabai -m config active_window_border_color  $bsp_border_color 
-yabai -m config normal_window_border_color  $normal_border_color 
-yabai -m config window_border_hidpi         on
-yabai -m config window_border_blur          on
+# # Border
+# yabai -m config window_border               off
+# yabai -m config window_border_width         3
+# yabai -m config window_border_radius        10
+# yabai -m config active_window_border_color  $bsp_border_color 
+# yabai -m config normal_window_border_color  $normal_border_color 
+# yabai -m config window_border_hidpi         on
+# yabai -m config window_border_blur          on
 
 
 # Mouse
@@ -67,18 +67,21 @@ yabai -m rule --add app="Raycast"           manage=off
 yabai -m rule --add app="Dash"              manage=off
 yabai -m rule --add app="Shottr"            manage=off
 yabai -m rule --add app="ClashX Pro"        manage=off
-yabai -m rule --add app="EuDic"             manage=off border=off
-yabai -m rule --add app="Calculator"        manage=off border=off
-yabai -m rule --add app="Numi"              manage=off border=off grid=4:4:1:1:2:2
-yabai -m rule --add app="ImageOptim"        manage=off border=off grid=4:4:1:1:2:2
-yabai -m rule --add app="TencentMeeting"    manage=off border=off
-yabai -m rule --add app="VoidScrappers"     manage=off border=off
+yabai -m rule --add app="EuDic"             manage=off 
+yabai -m rule --add app="Calculator"        manage=off 
+yabai -m rule --add app="Numi"              manage=off grid=4:4:1:1:2:2
+yabai -m rule --add app="ImageOptim"        manage=off grid=4:4:1:1:2:2
+yabai -m rule --add app="TencentMeeting"    manage=off 
+yabai -m rule --add app="VoidScrappers"     manage=off 
 
 yabai -m rule --add app="Orion" title="General" manage=off
 yabai -m rule --add app="Orion" title="Extension" manage=off
 
-yabai -m rule --add app="WeChat"            manage=off border=off space=^6 grid=4:4:1:1:2:2
-yabai -m rule --add app="QQ"                manage=off border=off space=^6 grid=4:4:1:1:2:2
+yabai -m rule --add app="WeChat"            manage=off space=^6 grid=4:4:1:1:2:2
+yabai -m rule --add app="微信"              manage=off space=^6 grid=4:4:1:1:2:2
+yabai -m rule --add app="大象"              manage=off space=^6 grid=4:4:1:1:2:2
+yabai -m rule --add app="To Do"             manage=off space=^6 grid=4:4:1:1:2:2
+yabai -m rule --add app="QQ"                manage=off space=^6 grid=4:4:1:1:2:2
 yabai -m rule --add app="Telegram"          manage=off space=^6
 yabai -m rule --add app="Foxmail"           manage=off space=^6
 
