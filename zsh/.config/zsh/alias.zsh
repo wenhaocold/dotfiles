@@ -8,7 +8,7 @@ function _alias()
 
 _alias vi nvim
 _alias lg lazygit
-_alias ls exa --icons
+_alias ls eza --icons
 alias la='ls -a'
 alias ll='ls -l'
 alias lld='ls -ld'
