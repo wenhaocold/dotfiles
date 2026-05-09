@@ -167,7 +167,7 @@ return packer.startup(function(use)
   
   use 'ojroques/vim-oscyank'
 
-  use 'lyokha/vim-xkbswitch'
+  --[[ use 'lyokha/vim-xkbswitch' ]]
 
   use {
       'numToStr/Navigator.nvim',

@@ -28,7 +28,7 @@ require "user.indent-blankline"
 require "user.treesitter-context"
 --[[ require "user.shade" ]]
 require "user.twilight"
-require "user.xkbswitch"
+--[[ require "user.xkbswitch" ]]
 require "user.luasnip"
 require "user.oscyank"
 require "user.hop"
